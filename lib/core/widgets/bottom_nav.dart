@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class BottomNav extends StatelessWidget {
   PageController Controller;
   BottomNav({Key? key, required this.Controller}) : super(key: key);

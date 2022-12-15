@@ -23,6 +23,7 @@ class WeatherRepositoryImpl extends WeatherRepository{
     try{
       Response response = await apiProvider.callCurrentWeather(cityName);
       if(response.statusCode == 200){
+        
         CurrentCityEntity currentCityEntity = CurrentCityModel.fromJson(response.data);
 
         return DataSuccess(currentCityEntity);

@@ -1,15 +1,14 @@
 part of 'home_bloc.dart';
 
-@immutable
-abstract class HomeEvent {}
+abstract class HomeEvent extends Equatable {
+  const HomeEvent();
 
-class LoadCwEvent extends HomeEvent{
-  final String cityName;
-  LoadCwEvent(this.cityName);
+  @override
+  List<Object> get props => [];
 }
 
+class LoadCurrentWeatherEvent extends HomeEvent {
+  String? cityName;
 
-class LoadFwEvent extends HomeEvent {
-  final ForecastParams forecastParams;
-  LoadFwEvent(this.forecastParams);
+  LoadCurrentWeatherEvent({this.cityName});
 }
